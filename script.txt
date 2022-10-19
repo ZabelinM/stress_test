@@ -1,0 +1,13 @@
+#!/bin/bash
+g++ v1.cpp -o e1.exe
+g++ v2.cpp -o e2.exe
+chmod +x gen.py
+chmod +x check.py
+for el in $(seq 90);
+do
+./gen.py
+./e1.exe
+./e2.exe
+./check.py
+done
+
